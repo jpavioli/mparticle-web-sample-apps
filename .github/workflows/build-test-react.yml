@@ -45,6 +45,9 @@ jobs:
         node-version: 16.x
         cache: 'npm'
         
+    - name : Change Directory
+      run: cd ${{ matrix.apps }}/
+        
     - name : Install Dependencies
       run: npm ci
       
