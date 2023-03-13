@@ -36,13 +36,15 @@ jobs:
     strategy:
       matrix:
         node-version: [12.x, 14.x, 15.x]
+        apps: [higgs-shop-sample-app, holy-shirts-and-pants]
+
 
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
-        repository: javioli/mparticle-web-sample-apps/core-sdk-samples/holy-shirts-and-pants
+        repository: javioli/mparticle-web-sample-apps/core-sdk-samples/${{ matrix.apps }}
         ref: development
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
