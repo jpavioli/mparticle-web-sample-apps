@@ -1,4 +1,4 @@
-name: Release Higgs Shop
+name: Release HSnP
 
 on:
     workflow_dispatch:
@@ -10,7 +10,7 @@ on:
 
 defaults:
     run:
-        working-directory: core-sdk-samples/higgs-shop-sample-app
+        working-directory: core-sdk-samples/holy-shirts-and-pants
 
 jobs:
     # SDK release is done from public/master branch.
