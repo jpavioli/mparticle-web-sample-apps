@@ -5,6 +5,10 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+    
+defaults:
+    run:
+        working-directory: core-sdk-samples/holy-shirts-and-pants
 
 jobs:
   build:
