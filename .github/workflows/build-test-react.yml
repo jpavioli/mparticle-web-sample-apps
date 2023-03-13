@@ -42,7 +42,7 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
-        repository: javioli/mparticle-web-sample-apps/holy-shirts-and-pants
+        repository: javioli/mparticle-web-sample-apps/core-sdk-samples/holy-shirts-and-pants
         ref: development
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
