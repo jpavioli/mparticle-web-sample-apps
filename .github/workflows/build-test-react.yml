@@ -11,8 +11,26 @@ defaults:
         working-directory: core-sdk-samples/holy-shirts-and-pants
 
 jobs:
-  build:
 
+  confirm-main-branch:
+    name: Confirm release is run on public/main branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+
+      - name: Branch name
+        run: |
+          BRANCHNAME=${GITHUB_REF##*/}
+          echo "confirming branch name, branch name is:"
+          echo $BRANCHNAME
+          if [ $BRANCHNAME != "main" ]
+          then
+            echo "You can only run a release from the main branch, you are trying to run it from ${BRANCHNAME}"
+            exit 1
+          fi
+
+  build:
     runs-on: ubuntu-latest
 
     strategy:
@@ -24,6 +42,8 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
+        repository: javioli/mparticle-web-sample-apps
+        ref: development
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
