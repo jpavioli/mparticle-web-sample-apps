@@ -29,7 +29,7 @@
         "web-vitals": "^2.1.4"
     },
     "scripts": {
-        "predeploy": "npm run build:clean && BUILD_PATH=./build/holy-shirts-and-pants npm run build",
+        "predeploy": "npm run build:clean && BUILD_PATH=./build/mparticle-web-sample-apps/holy-shirts-and-pants npm run build",
         "build:local-serve": "npm run build:clean && BUILD_PATH=./build/mparticle-web-sample-apps/holy-shirts-and-pants npm run build",
         "build:clean": "rm -rf build",
         "deploy": "gh-pages -d build",
