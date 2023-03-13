@@ -1,7 +1,11 @@
 {
     "name": "holy-shirts-and-pants",
     "version": "1.0.0",
+<<<<<<< HEAD
     "homepage": "https://javioli.github.io/holy-shirts-and-pants/",
+=======
+    "homepage": "https://jpavioli.github.io/holy-shirts-and-pants/",
+>>>>>>> 818480a98ad526fdb2d0d2e3070fe1cfa8366c15
     "dependencies": {
         "@emotion/react": "^11.9.3",
         "@emotion/styled": "^11.9.3",
@@ -29,7 +33,7 @@
         "web-vitals": "^2.1.4"
     },
     "scripts": {
-        "predeploy": "npm run build:clean && BUILD_PATH=./build/holy-shirts-and-pants npm run build",
+        "predeploy": "npm run build:clean && BUILD_PATH=./build/mparticle-web-sample-apps/holy-shirts-and-pants npm run build",
         "build:local-serve": "npm run build:clean && BUILD_PATH=./build/mparticle-web-sample-apps/holy-shirts-and-pants npm run build",
         "build:clean": "rm -rf build",
         "deploy": "gh-pages -d build",
