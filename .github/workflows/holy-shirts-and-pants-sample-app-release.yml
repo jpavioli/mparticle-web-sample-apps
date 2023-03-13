@@ -40,7 +40,7 @@ jobs:
           - name: "Checkout development branch"
             uses: actions/checkout@v2
             with:
-              repository: mparticle/mparticle-web-sample-apps
+              repository: mparticle/mparticle-web-sample-apps/holy-shirts-and-pants
               ref: development
           - name: "Create and push release branch"
             run: |
