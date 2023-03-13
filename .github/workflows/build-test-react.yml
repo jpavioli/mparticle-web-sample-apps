@@ -7,8 +7,8 @@ on:
     branches: [ "main" ]
     
 defaults:
-    run:
-        working-directory: core-sdk-samples/holy-shirts-and-pants
+  run:
+      working-directory: core-sdk-samples/
 
 jobs:
 
@@ -35,19 +35,22 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 15.x]
-        apps: [higgs-shop-sample-app, holy-shirts-and-pants]
-
+        apps: [holy-shirts-and-pants, higgs-shop-sample-app]
 
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js to build and test ${{ matrix.apps }}
       uses: actions/setup-node@v3
       with:
-        repository: javioli/mparticle-web-sample-apps/core-sdk-samples/${{ matrix.apps }}
-        ref: development
-        node-version: ${{ matrix.node-version }}
+        node-version: 16.x
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+        
+    - name : Install Dependencies
+      run: npm ci
+      
+    - name: Deploy to Github Pages
+      run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npm run deploy
+      env:
+          GITHUB_TOKEN: ${{ secrets.MP_SEMANTIC_RELEASE_BOT }}
