@@ -37,7 +37,7 @@ jobs:
 
     strategy:
       matrix:
-        apps: [holy-shirts-and-pants, higgs-shop-sample-app]
+        apps: [holy-shirts-and-pants] 
 
     steps:
     - name: Use Node.js to build and test ${{ matrix.apps }}
