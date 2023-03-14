@@ -1,7 +1,7 @@
 {
     "name": "holy-shirts-and-pants",
     "version": "1.0.0",
-    "homepage": "https://jpavioli.github.io/holy-shirts-and-pants/",
+    "homepage": "https://jpavioli.github.io/mparticle-web-sample-apps/holy-shirts-and-pants/",
     "dependencies": {
         "@emotion/react": "^11.9.3",
         "@emotion/styled": "^11.9.3",
