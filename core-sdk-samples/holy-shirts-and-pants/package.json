@@ -1,11 +1,7 @@
 {
     "name": "holy-shirts-and-pants",
     "version": "1.0.0",
-<<<<<<< HEAD
-    "homepage": "https://javioli.github.io/holy-shirts-and-pants/",
-=======
     "homepage": "https://jpavioli.github.io/holy-shirts-and-pants/",
->>>>>>> 818480a98ad526fdb2d0d2e3070fe1cfa8366c15
     "dependencies": {
         "@emotion/react": "^11.9.3",
         "@emotion/styled": "^11.9.3",
