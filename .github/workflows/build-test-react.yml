@@ -55,5 +55,5 @@ jobs:
     - name: Deploy to Github Pages
       working-directory: core-sdk-samples/${{ matrix.apps }}
       run: |
-          git remote set-url origin https://git:${GITHUB_REPOSITORY_OWNER}@github.com/${GITHUB_REPOSITORY}.git
+          git remote set-url origin git@github.com:${GITHUB_REPOSITORY_OWNER}/${GITHUB_REPOSITORY}.git
           npm run deploy
