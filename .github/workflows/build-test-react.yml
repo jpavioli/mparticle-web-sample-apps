@@ -55,7 +55,5 @@ jobs:
     - name: Deploy to Github Pages
       working-directory: core-sdk-samples/${{ matrix.apps }}
       run: |
-          git remote set-url origin https://github.com/jpavioli/mparticle-web-sample-apps.git
+          git remote set-url https://git:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
           npm run deploy
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
