@@ -1,7 +1,7 @@
 {
     "name": "higgs-shop-sample-app",
     "version": "1.0.0",
-    "homepage": "https://jpavioli.github.io/higgs-shop/",
+    "homepage": "https://jpavioli.github.io/mparticle-web-sample-apps/higgs-shop/",
     "dependencies": {
         "@emotion/react": "^11.10.6",
         "@emotion/styled": "^11.10.6",
