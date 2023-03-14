@@ -40,7 +40,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js to build and test ${{ matrix.apps }}
-      uses: actions/setup-node@v3
       with:
         node-version: 16.x
         cache: 'npm'
