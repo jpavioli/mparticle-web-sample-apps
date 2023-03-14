@@ -45,13 +45,12 @@ jobs:
         node-version: 16.x
         cache: 'npm'
         
-    - name : Change Directory
-      run: cd ${{ matrix.apps }}/
-        
     - name : Install Dependencies
+      working-directory: ./${{ matrix.apps }}
       run: npm ci
       
     - name: Deploy to Github Pages
+      working-directory: ./${{ matrix.apps }}
       run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           npm run deploy
