@@ -48,10 +48,13 @@ jobs:
         
     - name : Install Dependencies
       working-directory: core-sdk-samples/${{ matrix.apps }}
-      run: npm ci
+      run: |
+          npm ci
+          npm run build
       
     - name: Deploy to Github Pages
       working-directory: core-sdk-samples/${{ matrix.apps }}
       run: |
-          git remote set-url origin git@github.com:jpavioli/${GITHUB_REPOSITORY}.git
           npm run deploy
+      env:
+          SSH_KEY: ${{ secrets.DEPLOY_KEY }}
