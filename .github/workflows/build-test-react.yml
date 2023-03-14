@@ -31,9 +31,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GIT_AUTHOR_NAME: jpavioli
-      GIT_AUTHOR_EMAIL: javioli@mparticle.com
+      GIT_AUTHOR_EMAIL: justin.avioli@gmail.com
       GIT_COMMITTER_NAME: jpavioli
-      GIT_COMMITTER_EMAIL: javioli@mparticle.com
+      GIT_COMMITTER_EMAIL: justin.avioli@gmail.com
 
     strategy:
       matrix:
