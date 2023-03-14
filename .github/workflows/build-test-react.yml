@@ -49,7 +49,7 @@ jobs:
       run: npm ci
       
     - name: Deploy to Github Pages
-      working-directory: ./${{ matrix.apps }}
+      working-directory: ${{ matrix.apps }}
       run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           npm run deploy
