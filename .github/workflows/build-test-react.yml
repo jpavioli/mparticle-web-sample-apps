@@ -55,5 +55,3 @@ jobs:
       run: |
           git remote set-url origin git@github.com:jpavioli/${GITHUB_REPOSITORY}.git
           npm run deploy
-      env:
-          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
